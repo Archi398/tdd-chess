@@ -117,12 +117,12 @@ test('isValidMoveBishop', () => {
   expect(result).toBe(true)
 });
 
-test('isValidMoveBishop', () => {
-  // init f1 b5 wB
+test('isValidMoveKnight', () => {
+  // init f4 d3 wN
   let
-    sourceSquare = 'f1',
-    targetSquare = 'b5',
-    piece = 'wB';
+    sourceSquare = 'f4',
+    targetSquare = 'd3',
+    piece = 'wN';
 
   const [sourceFile, sourceRank] = sourceSquare;
   const [targetFile, targetRank] = targetSquare;
@@ -133,7 +133,7 @@ test('isValidMoveBishop', () => {
 
   let result = false;
 
-  if (fileDifference === rankDifference) {
+  if ((fileDifference === 2 && rankDifference === 1) || (fileDifference === 1 && rankDifference === 2)) {
     result = true;
   }
 

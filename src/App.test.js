@@ -36,3 +36,20 @@ test('isValidMovePawn', ()=>{
 
   expect(result).toBe(true)
 });
+
+test('rook moves logic', ()=>{
+  let
+    sourceSquare = 'a1',
+    legalMoves = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1'],
+    targetSquare = 'a6',
+    piece = 'R',
+    result = false;
+
+  if(!legalMoves.includes(targetSquare)){
+    result = false
+  }
+  else
+    result = true
+
+    expect(result).toBe(true)
+});
